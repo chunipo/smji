@@ -1,0 +1,47 @@
+/* 
+  Localizable.strings
+  51tgtwifi
+
+  Created by TGT on 2017/10/24.
+  Copyright © 2017年 weiyuxiang. All rights reserved.
+*/
+//商城标题
+"title" = "Traffic mall";
+
+
+//tabbar按钮
+"shouye" = "Home";
+"shangcheng" = "Mall";
+"shezhi" = "Set up";
+
+
+//设置界面
+
+"setTitle" = "Set up";
+
+//列表名
+"jibenshezhi" = "basic settings";
+"devicedName" = "No data";
+"guanbishebeiredian" = "Turn off device hotspots";
+"xiugaishebeiredian" = "Modify the device hotspot";
+"shezhivpn" = "Set up APN";
+"lianjieWifi" = "Connect Wifi";
+"shezhifanyiyuyan" = "Set the translation language";
+"shezhitishiyuyan" = "Set the prompt language";
+"duoyuyan" = "multi-language";
+
+"gaojishezhi" = "advanced settings";
+"shezhiredianfangwenmingdan" = "Set hotspot access blacklist";
+"shebeizijian" = "Self-test equipment";
+"ruanjianbanbenjiance" = "Software version detection";
+"lishiliuliangdingdan" = "Historical flow orders";
+
+
+/* 首页 */
+"shebeissid" = "Device SSID:";
+"Wifimima" = "Wifi password:";
+"fanyiyuzhong" = "Translation language:";
+"shengyudianliang" = "remaining battery:";
+"shebeilianjieshu" = "Number of device connections:";
+"xinhaoqiangdu" = "Signal strength:";
+"shebeibanben"  = "Device version:";

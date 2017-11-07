@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  51tgtwifi
+
+  Created by TGT on 2017/10/24.
+  Copyright © 2017年 weiyuxiang. All rights reserved.
+*/
+//商城标题
+"title" = "交通モール";
+
+
+//tabbar按钮
+"shouye" = "ホーム";
+"shangcheng" = "モール";
+"shezhi" = "セットアップ";
+
+//设置界面
+
+"setTitle" = "セットアップ";
+
+//列表名
+"jibenshezhi" = "基本設定";
+"devicedName" = "データがありません";
+"guanbishebeiredian" = "デバイスのホットスポットを無効にする";
+"xiugaishebeiredian" = "デバイスのホットスポットを変更する";
+"shezhivpn" = "APNを設定する";
+"lianjieWifi" = "Wi-Fiを接続する";
+"shezhifanyiyuyan" = "翻訳言語を設定する";
+"shezhitishiyuyan" = "プロンプト言語を設定する";
+"duoyuyan" = "多言語";
+
+"gaojishezhi" = "詳細設定";
+"shezhiredianfangwenmingdan" = "ホットスポットアクセスブラックリストを設定する";
+"shebeizijian" = "自己診断装置";
+"ruanjianbanbenjiance" = "ソフトウェアのバージョン検出";
+"lishiliuliangdingdan" = "過去のフロー指図";
+
+
+/* 首页 */
+"shebeissid" = "デバイスSSID:";
+"Wifimima" = "Wifiパスワード:";
+"fanyiyuzhong" = "翻訳言語:";
+"shengyudianliang" = "残り容量:";
+"shebeilianjieshu" = "デバイス接続の数:";
+"xinhaoqiangdu" = "信号強度:";
+"shebeibanben"  = "デバイスのバージョン:";
