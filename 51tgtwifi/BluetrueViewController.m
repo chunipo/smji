@@ -7,10 +7,13 @@
 //
 
 #import "BluetrueViewController.h"
+#import "NSStringTool.h"
 
 #import <CoreBluetooth/CoreBluetooth.h>
 #define kServiceUUID @"49535343-FE7D-4AE5-8FA9-9FAFD205E455" //服务的UUID
 #define kCharacteristicUUID @"444E414C-4933-4543-AE2E-F30CB91BB70D" //特征的UUID
+
+
 
 @interface BluetrueViewController ()<CBCentralManagerDelegate,CBPeripheralDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -55,6 +58,7 @@
     switch (central.state) {
         case 0:
             NSLog(@"CBCentralManagerStateUnknown");
+           
             break;
         case 1:
             NSLog(@"CBCentralManagerStateResetting");
@@ -95,7 +99,6 @@
                   RSSI:(NSNumber *)RSSI // 外设发出的蓝牙信号强度
 {
 
-    NSLog(@"peripheral.name####%@。信号强度###%@",peripheral,RSSI);
     
     if (peripheral.name) {
         
@@ -137,7 +140,16 @@
     // 在此时我们的过滤规则是:有OBand前缀并且信号强度大于35
     // 通过打印,我们知道RSSI一般是带-的
     
-    if ([peripheral.name hasPrefix:@"途鸽翻译机"]) {
+    
+    /* mac地址获取方式。 只能存在广播中的kCBAdvDataManufacturerData里  */
+    NSData *data = [advertisementData objectForKey:@"kCBAdvDataManufacturerData"];
+    NSString *mac = [NSStringTool convertToNSStringWithNSData:data];
+    mac = [mac stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    NSLog(@"peripheral.name####%@。信号强度###%@",peripheral.identifier.UUIDString,mac);
+   
+    
+    if ([mac hasPrefix:@"c1fff0c850003173"]) {
         // 在此处对我们的 advertisementData(外设携带的广播数据) 进行一些处理
         
         // 通常通过过滤,我们会得到一些外设,然后将外设储存到我们的可变数组中,
@@ -173,13 +185,13 @@
 // 外设连接失败
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
-    NSLog(@"%s, line = %d, %@=连接失败", __FUNCTION__, __LINE__, peripheral.name);
+    NSLog(@"%@=连接失败",  peripheral.name);
 }
 
 // 丢失连接
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
-    NSLog(@"%s, line = %d, %@=断开连接", __FUNCTION__, __LINE__, peripheral.name);
+    NSLog(@"%@=断开连接", peripheral.name);
 }
 
 //一旦我们读取到外设的相关服务UUID就会回调下面的方法
@@ -188,20 +200,20 @@
     //到这里，说明你上面调用的  [_peripheral discoverServices:nil]; 方法起效果了，我们接着来找找特征值UUID
     NSLog(@"发现服务###%@",[peripheral services]);
        /*1 全局查找*/
-//    for (CBService *s in [peripheral services]) {
-//        
-//        [peripheral discoverCharacteristics:nil forService:s];
-//    }
+    for (CBService *s in [peripheral services]) {
+        
+        [peripheral discoverCharacteristics:nil forService:s];
+    }
     
     /*2  指定某个特征查找*/
-    CBUUID *serverUDID = [CBUUID UUIDWithString:kServiceUUID];
-    CBUUID *charaterUDID = [CBUUID UUIDWithString:kCharacteristicUUID];
-    for (CBService *server in peripheral.services) {
-        if ([server.UUID isEqual:serverUDID]) {
-            //查找制定的服务的特征
-            [peripheral discoverCharacteristics:@[charaterUDID] forService:server];
-        }
-    }
+//    CBUUID *serverUDID = [CBUUID UUIDWithString:kServiceUUID];
+//    CBUUID *charaterUDID = [CBUUID UUIDWithString:kCharacteristicUUID];
+//    for (CBService *server in peripheral.services) {
+//        if ([server.UUID isEqual:serverUDID]) {
+//            //查找制定的服务的特征
+//            [peripheral discoverCharacteristics:@[charaterUDID] forService:server];
+//        }
+//    }
     
     
 
@@ -215,6 +227,9 @@
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error
 {
 //    [self writeToLog:@"查找到对应的特征"];
+    
+    NSLog(@"特征值是；%@",service.characteristics);
+    
     
     //设置服务特征值的UUID
     CBUUID *serverUUID = [CBUUID UUIDWithString:kServiceUUID];

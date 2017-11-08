@@ -81,10 +81,11 @@
         NSLog(@"#我在shopcell里#商城的图片加载完成思密达");
     }];
     
-    _title.text = [model.title stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    //解码
+    _title.text = [model.title stringByRemovingPercentEncoding];
     
     _type.text = model.price_type;
-//
+
     _price.text = [NSString stringWithFormat:@"%@",[NSNumber numberWithInt:model.price]];
     
     
@@ -95,8 +96,7 @@
     _title.numberOfLines = 0;
     
     
-   
-//
+
     _type.frame = CGRectMake(XScreenWidth-120, _title.y, 40, 30);
     _price.frame = CGRectMake(_type.maxX+2, _type.y, 60, 30);
     

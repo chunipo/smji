@@ -132,11 +132,12 @@
     }
     else if (btn.tag == 102)
     {
+        NSArray *lans;
         [self showSchdu];
         if (_isWhatLanguage==0) {
             // 切换语言。简体中文  zh-Hans    繁体中文  zh-Hant  英语 en  日文  ja
-            NSArray *lans = @[@"zh-Hans"];
-            [[NSUserDefaults standardUserDefaults] setObject:lans forKey:@"AppleLanguages"];
+            lans = @[@"zh-Hans"];
+           
             
 //            // 切换语言后
 //            NSArray *langArr2 = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];
@@ -147,33 +148,21 @@
         }else if (_isWhatLanguage==1){
             
             // 切换语言。简体中文  zh-Hans    繁体中文  zh-Hant  英语 en  日文  ja
-            NSArray *lans = @[@"zh-Hant"];
-            [[NSUserDefaults standardUserDefaults] setObject:lans forKey:@"AppleLanguages"];
-            
-
-
-
-        
+            lans = @[@"zh-Hant"];
+    
         }else if (_isWhatLanguage==2){
             // 切换语言。简体中文  zh-Hans    繁体中文  zh-Hant  英语 en  日文  ja
-            NSArray *lans = @[@"en"];
-            [[NSUserDefaults standardUserDefaults] setObject:lans forKey:@"AppleLanguages"];
-            
-            
-
-        
+            lans = @[@"en"];
+           
         }else if (_isWhatLanguage==3){
             
             // 切换语言。简体中文  zh-Hans    繁体中文  zh-Hant  英语 en  日文  ja
-            NSArray *lans = @[@"ja"];
-            [[NSUserDefaults standardUserDefaults] setObject:lans forKey:@"AppleLanguages"];
-            
-
+            lans = @[@"ja"];
         
-        }else{
+        }else{}
         
+        [[NSUserDefaults standardUserDefaults] setObject:lans forKey:@"AppleLanguages"];
         
-        }
         double delayInSeconds = 1.0;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds *NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){

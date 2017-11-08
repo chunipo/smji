@@ -13,7 +13,9 @@
 #import "ShopTabCell.h"
 #import "DetailVc.h"
 
+#define DoorOpen @"http://as2.51tgt.com/FyjApp/GetFlowProducts?ssid=TGT23170126536&type=JPY"
 #define PicHead  @"http://as2.51tgt.com"
+
 
 
 @interface ShoppingVc ()<UITableViewDelegate,UITableViewDataSource,PayPalPaymentDelegate>
@@ -34,32 +36,40 @@
 
 @implementation ShoppingVc
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // 初始化数组
+    _arr = [NSMutableArray arrayWithCapacity:0];
+    
+    // 背景图片
+    [self setBackgroudImage];
+    
+    // 创建tableview
+    [self HeadTitle];
+    
+    // 网络请求测试
+    [self httpRequest];
 
-    
-   
-    
-    //    背景图片
+
+
+}
+
+#pragma mark - 设置背景图片
+-(void)setBackgroudImage{
+
     UIImageView *backgroud = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, XScreenWidth,XScreenHeight)];
     
     backgroud.image = [UIImage imageNamed:@"2.jpg"];
     
     [self.view addSubview:backgroud];
-    
-    
-//    网络请求测试
-    [self httpRequest];
-    
-    
-    
-//    创建tableview
-    [self HeadTitle];
-    
-//    [self createTableView];
-    
-
 }
 
 #pragma mark - 显示进度条
@@ -81,29 +91,20 @@
 
 
 
-
+#pragma mark -网络请求数据
 -(void)httpRequest{
-//    初始化数组
-    _arr = [NSMutableArray arrayWithCapacity:0];
-    
 
-    
+
     [self showSchdu];
     
     
-
-
-//        h5
-        NSString *str = @"http://as2.51tgt.com/FyjApp/GetFlowProducts?ssid=TGT23170126536&type=JPY";
+    NSString *str = DoorOpen;
     
-//          str =  [str SHA256];
-    
-        [NetWork sendGetNetWorkWithUrl:str parameters:nil hudView:self.view successBlock:^(id data) {
+    [NetWork sendGetNetWorkWithUrl:str parameters:nil hudView:self.view successBlock:^(id data) {
             
-            NSDictionary *dic1 = data[@"data"];
-            NSArray *arr = dic1[@"products"];
-            NSLog(@"data==================%@",arr);
-            
+        NSDictionary *dic1 = data[@"data"];
+        NSArray *arr = dic1[@"products"];
+        NSLog(@"data==================%@",arr);
             for (NSDictionary *dic in arr) {
                 ProductMo *ProModel = [[ ProductMo alloc]init];
                 
@@ -122,13 +123,6 @@
     
         }];
     
-    
-
-    
-    
-    
-
-
 
 }
 
@@ -177,10 +171,6 @@
     
     [self.view addSubview:_tableView];
     
-//    _arr = @[@"100M/天",@"200M/天",@"100M/时",@"200M/时"];
-    
-    
-
 
 }
 
@@ -198,12 +188,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ShopTabCell *cell = [ShopTabCell CellWithtable:tableView];
     
-    
-//    cell.textLabel.text = _arr[indexPath.row];
     cell.model = _arr[indexPath.row];
-    
-    
-    
     
     return cell;
 }

@@ -30,19 +30,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //    背景图片
-    UIImageView *backgroud = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, XScreenWidth,XScreenHeight)];
+    [self setBackgroudImage];
     
-    backgroud.image = [UIImage imageNamed:@"2.jpg"];
-    
-    [self.view addSubview:backgroud];
-    
-    
-    
-  
-
-    
-    
-//    标题栏
+    //    标题栏
     [self HeadTitle];
     
     
@@ -50,6 +40,18 @@
     
     
 }
+
+#pragma mark - 设置背景图片
+-(void)setBackgroudImage{
+    
+    UIImageView *backgroud = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, XScreenWidth,XScreenHeight)];
+    
+    backgroud.image = [UIImage imageNamed:@"2.jpg"];
+    
+    [self.view addSubview:backgroud];
+}
+
+
 #pragma mark - 创建标题栏
 -(void)HeadTitle{
     UIView *_TitleView = [[UIView alloc]initWithFrame:CGRectMake(0, 20, XScreenWidth, 60)];
@@ -139,10 +141,7 @@
 //    设置右边箭头
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-//    设置左边小图标
-//    NSArray *images = @[@[@"",@"",@"",@"",@"",@""],@[@"",@"",@"",@""]];
-//    
-//    cell.imageView.image = [UIImage imageNamed:images[indexPath.section][indexPath.row]];
+
     
     
     return cell;
@@ -150,10 +149,7 @@
 
 }
 
-//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//
-//  
-//}
+
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     NSString *str1 = SetLange(@"jibenshezhi");

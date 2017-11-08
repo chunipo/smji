@@ -12,7 +12,7 @@
 #import "Get_IP_Address.h"
 #import <SystemConfiguration/CaptiveNetwork.h>
 
-#define KeyMis  @"openAdb"
+#define KeyMis  @"getDeviceInfo"
 
 typedef void (^InfoBlock1)(NSDictionary *dic);
 typedef void (^InfoBlock2)(NSDictionary *dic);

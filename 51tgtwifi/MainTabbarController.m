@@ -33,50 +33,70 @@
     
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(SetLanguage) name:@"SetLanguage" object:nil];
     
-    [self createUI];
+    
 
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    _arr2 = [NSMutableArray array];
+    
+    [self createUI];
+
+}
+
 -(void)createUI{
     
-//    NSArray *arr1 = @[@"首页",@"商城",@"设置"];
+    //    NSArray *arr1 = @[@"首页",@"商城",@"设置"];
     
     NSString *str1 = SetLange(@"shouye");
     NSString *str2 = SetLange(@"shangcheng");
     NSString *str3 = SetLange(@"shezhi");
-    
     NSArray *arr1 = @[str1,str2,str3];
+    NSArray *arr2 = @[@"BluetrueViewController",@"ShoppingVc",@"SetViewController"];
+    
+    //添加视图控制器到tabbar
+    [self addVc:arr2 title:arr1];
     
     
-    NSArray *arr2 = @[@"HomeViewController",@"ShoppingVc",@"SetViewController"];
     
- 
+   // 设置tabbar颜色跟隐藏黑线
+    [self settabbarUI];
+   
+}
+#pragma mark -添加控制器到tabbarVc
+-(void)addVc:(NSArray *)arr2 title:(NSArray *)arr1{
     
-    _arr2 = [NSMutableArray array];
+    
     
     for(int i = 0;i<arr2.count;i++){
         zx = [[NSClassFromString(arr2[i]) alloc]init];
         
         zx.tabBarItem = [[UITabBarItem alloc]initWithTitle:arr1[i] image:nil tag:0 ];
         
-        
-            
-            
-            [_arr2 addObject:zx];
-        }
+        [_arr2 addObject:zx];
+    }
     
     
     self.viewControllers = _arr2;
+
+
+}
+
+#pragma mark -设置tabbar颜色跟隐藏黑线
+-(void)settabbarUI{
+
     
-    
-   // 设置tabbar颜色跟隐藏黑线
     self.tabBar.barTintColor = [UIColor whiteColor];
     
     [UITabBar appearance].clipsToBounds = YES;
 
 }
 
+
+#pragma mark - 设置语言后回到设置页面
 -(void)SetLanguage{
     self.selectedIndex = 2;
 }

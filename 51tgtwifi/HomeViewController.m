@@ -95,7 +95,7 @@
     [self createDeviceLabel];
     
 //   子线程加载数据
-//    [self loadInfo];
+    [self loadInfo];
     
     
 //    dispatch_queue_t nimei = dispatch_queue_create("lalal", DISPATCH_QUEUE_CONCURRENT);

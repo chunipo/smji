@@ -44,10 +44,16 @@
 //商用的client id
 
 //正式
-#define PPEnvironmentProduction @"Aeb29234lVUC7J-d8kxb24xzkLs7xdfZ2BZawAOZhzq0FytZ1br0yKE2jmaTne3fHwUxSCTw50DGQpW3"
+//#define PPEnvironmentProduction @"Aeb29234lVUC7J-d8kxb24xzkLs7xdfZ2BZawAOZhzq0FytZ1br0yKE2jmaTne3fHwUxSCTw50DGQpW3"
+
+#define PPEnvironmentProduction @"AVoZGEMFTX_ID1n50O03rtvI-RYdoViPqC79MhuVG0O6YpmI1-7boobQwmXmuBWlSATNQQlE_OSCy8uU"
+
+
 
 //沙盒
-#define PPEnvironmentSandbox @"AfhLLjSTUMDkV3n48QjpVvoX3WgqdblUQdyz21je155qoIXQXB_lxYfmS2w0PtxVJGHLwnXSbzgyi5Rb"
+//#define PPEnvironmentSandbox @"AfhLLjSTUMDkV3n48QjpVvoX3WgqdblUQdyz21je155qoIXQXB_lxYfmS2w0PtxVJGHLwnXSbzgyi5Rb"
+
+#define PPEnvironmentSandbox @"AYD5FhYrZeCQ3DSkpujI-UpFnR6_uF-tcZWSr2ee65kayodOeikhddRLbu3dPUK7cg5wW6wiPADA_SWk"
 
 #import "PayPalMobile.h"
 

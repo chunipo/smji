@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07BC2A5F1FB2B59F00735894 /* NSStringTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC2A5E1FB2B59F00735894 /* NSStringTool.m */; };
 		120B87801F95AF1A0053B5A5 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 120B877F1F95AF1A0053B5A5 /* NetWork.m */; };
 		120B87841F95B1450053B5A5 /* ShoppingVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 120B87831F95B1450053B5A5 /* ShoppingVc.m */; };
 		120B87871F95E1480053B5A5 /* NSString+SHA256.m in Sources */ = {isa = PBXBuildFile; fileRef = 120B87861F95E1480053B5A5 /* NSString+SHA256.m */; };
@@ -128,6 +129,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07BC2A5D1FB2B59F00735894 /* NSStringTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringTool.h; sourceTree = "<group>"; };
+		07BC2A5E1FB2B59F00735894 /* NSStringTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringTool.m; sourceTree = "<group>"; };
 		120B877E1F95AF1A0053B5A5 /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
 		120B877F1F95AF1A0053B5A5 /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
 		120B87821F95B1450053B5A5 /* ShoppingVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingVc.h; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				120B87861F95E1480053B5A5 /* NSString+SHA256.m */,
 				120B877E1F95AF1A0053B5A5 /* NetWork.h */,
 				120B877F1F95AF1A0053B5A5 /* NetWork.m */,
+				07BC2A5D1FB2B59F00735894 /* NSStringTool.h */,
+				07BC2A5E1FB2B59F00735894 /* NSStringTool.m */,
 			);
 			name = Selfing;
 			sourceTree = "<group>";
@@ -901,6 +906,7 @@
 				1AF3C0CA1F8FBB7B00A35AFC /* ViewController.m in Sources */,
 				129AE1F11F9DA5310019192D /* QLCustomButton.m in Sources */,
 				12D6B87C1FA1984C006B6B38 /* BluetrueViewController.m in Sources */,
+				07BC2A5F1FB2B59F00735894 /* NSStringTool.m in Sources */,
 				1AF3C0C71F8FBB7B00A35AFC /* AppDelegate.m in Sources */,
 				129AE1E21F9DA26A0019192D /* PayView.m in Sources */,
 				129AE1DF1F9DA20C0019192D /* PayViewController.m in Sources */,
