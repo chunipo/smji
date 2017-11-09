@@ -146,7 +146,6 @@
 
 
         }else if (_isWhatLanguage==1){
-            
             // 切换语言。简体中文  zh-Hans    繁体中文  zh-Hant  英语 en  日文  ja
             lans = @[@"zh-Hant"];
     
@@ -155,43 +154,49 @@
             lans = @[@"en"];
            
         }else if (_isWhatLanguage==3){
-            
             // 切换语言。简体中文  zh-Hans    繁体中文  zh-Hant  英语 en  日文  ja
             lans = @[@"ja"];
         
         }else{}
         
-        [[NSUserDefaults standardUserDefaults] setObject:lans forKey:@"AppleLanguages"];
-        
-        double delayInSeconds = 1.0;
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds *NSEC_PER_SEC);
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            //执行事件
-            [_TitleView removeFromSuperview];
-            [self hideSchdu];
-            AppDelegate *appDelegate =
-            (AppDelegate *)[[UIApplication sharedApplication] delegate];
-            appDelegate.window.rootViewController = [[MainNavVc alloc]initWithRootViewController:[[MainTabbarController alloc]init]];
-            
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"SetLanguage" object:nil];
-            
-           
-            
-            
-            //                double delayInSeconds2 = 1.0;
-            //                dispatch_time_t popTime2 = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds2 *NSEC_PER_SEC);
-            //                dispatch_after(popTime2, dispatch_get_main_queue(), ^(void){
-            //                    //执行事件
-            //
-            //                });
-            
-            
-            
-        });
-
-    
+       //语言转换开始
+        [self changeLanguage:lans];
     }
   
+
+}
+
+#pragma mark - 语言转换开始--
+-(void)changeLanguage:(NSArray *)lans{
+    //启动语言转换。
+    [[NSUserDefaults standardUserDefaults] setObject:lans forKey:@"AppleLanguages"];
+    
+    double delayInSeconds = 1.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds *NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        //执行事件
+        [_TitleView removeFromSuperview];
+        [self hideSchdu];
+        AppDelegate *appDelegate =
+        (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        appDelegate.window.rootViewController = [[MainNavVc alloc]initWithRootViewController:[[MainTabbarController alloc]init]];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SetLanguage" object:nil];
+        
+        
+        
+        
+        //                double delayInSeconds2 = 1.0;
+        //                dispatch_time_t popTime2 = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds2 *NSEC_PER_SEC);
+        //                dispatch_after(popTime2, dispatch_get_main_queue(), ^(void){
+        //                    //执行事件
+        //
+        //                });
+        
+        
+        
+    });
+
 
 }
 
