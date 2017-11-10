@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BabyBluetooth (0.7.0)
   - CardIO (5.4.1)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
@@ -31,6 +32,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - BabyBluetooth (~> 0.7.0)
   - Masonry
   - MBProgressHUD
   - MJExtension
@@ -40,6 +42,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BabyBluetooth: d50758aecf24d4a0ab9271d69f0f116d6bee51c9
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -48,6 +51,6 @@ SPEC CHECKSUMS:
   SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
   WechatOpenSDK: 0ee07a8d492299d3e47372a33da5af26524a7576
 
-PODFILE CHECKSUM: d12065a6a0f2116cb952de4860fdf2da4e86fdf4
+PODFILE CHECKSUM: 85b8236afbbf73e3360edd1338f24bbe546ff22f
 
 COCOAPODS: 1.3.1

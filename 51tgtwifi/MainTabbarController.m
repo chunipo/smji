@@ -12,6 +12,7 @@
 #import "SetViewController.h"
 #import "ShoppingVc.h"
 #import "BluetrueViewController.h"
+#import "BluetrueVC.h"
 
 @interface MainTabbarController ()
 {
@@ -55,7 +56,7 @@
     NSString *str2 = SetLange(@"shangcheng");
     NSString *str3 = SetLange(@"shezhi");
     NSArray *arr1 = @[str1,str2,str3];
-    NSArray *arr2 = @[@"BluetrueViewController",@"ShoppingVc",@"SetViewController"];
+    NSArray *arr2 = @[@"BluetrueVC",@"ShoppingVc",@"SetViewController"];
     
     //添加视图控制器到tabbar
     [self addVc:arr2 title:arr1];
