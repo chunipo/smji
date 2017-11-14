@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CocoaAsyncSocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
+		<key>30B080655BD5393442D8A9C29A4E697D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>834A142CC3D637A22F9D4541A2B887BB</key>
+		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EBBA8A188533A337E68B14A3C856063B</key>
+		<key>BB9A26501C8F0D33BBEFA447DDCD4F13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CA69D72DC702AD788CEA6A5DC3545B47</key>
 		<dict>
 			<key>primary</key>
 			<true/>

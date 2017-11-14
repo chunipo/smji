@@ -257,6 +257,10 @@ typedef void (^errorBlock)(NSString *error);
     
 }
 
+-(void)onSocketDidDisconnect:(AsyncSocket *)sock{
+  NSLog(@"连接断开#########");
+}
+
 - (void)onSocket:(AsyncSocket *)sock willDisconnectWithError:(NSError *)err
 {
     NSLog(@"连接将要断开###%@###%@###",err,self.dataList);

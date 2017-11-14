@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07635CEA1FB9320B00057FC8 /* GCDSocketSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 07635CE91FB9320B00057FC8 /* GCDSocketSDK.m */; };
+		07635CEE1FB9325200057FC8 /* GCDTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07635CED1FB9325200057FC8 /* GCDTestVC.m */; };
 		07BC2A5F1FB2B59F00735894 /* NSStringTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC2A5E1FB2B59F00735894 /* NSStringTool.m */; };
 		07CD042D1FB4054A009081EE /* BLETool.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD042C1FB4054A009081EE /* BLETool.m */; };
 		07CD04301FB54F40009081EE /* BluetrueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CD042F1FB54F40009081EE /* BluetrueVC.m */; };
@@ -83,7 +85,6 @@
 		1AF3C0D21F8FBB7B00A35AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF3C0D01F8FBB7B00A35AFC /* LaunchScreen.storyboard */; };
 		1AF3C0DD1F8FBB7B00A35AFC /* _1tgtwifiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3C0DC1F8FBB7B00A35AFC /* _1tgtwifiTests.m */; };
 		1AF3C0E81F8FBB7B00A35AFC /* _1tgtwifiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3C0E71F8FBB7B00A35AFC /* _1tgtwifiUITests.m */; };
-		1AF3C0FE1F8FBBCF00A35AFC /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3C0F91F8FBBCF00A35AFC /* AsyncSocket.m */; };
 		1AF3C0FF1F8FBBCF00A35AFC /* Get_IP_Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3C0FB1F8FBBCF00A35AFC /* Get_IP_Address.m */; };
 		1AF3C1001F8FBBCF00A35AFC /* TGTInfoSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3C0FD1F8FBBCF00A35AFC /* TGTInfoSDK.m */; };
 		1AF3C1051F8FBBDE00A35AFC /* MainNavVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3C1021F8FBBDE00A35AFC /* MainNavVc.m */; };
@@ -131,6 +132,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07635CE81FB9320B00057FC8 /* GCDSocketSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDSocketSDK.h; sourceTree = "<group>"; };
+		07635CE91FB9320B00057FC8 /* GCDSocketSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDSocketSDK.m; sourceTree = "<group>"; };
+		07635CEC1FB9325200057FC8 /* GCDTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTestVC.h; sourceTree = "<group>"; };
+		07635CED1FB9325200057FC8 /* GCDTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTestVC.m; sourceTree = "<group>"; };
 		07BC2A5D1FB2B59F00735894 /* NSStringTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringTool.h; sourceTree = "<group>"; };
 		07BC2A5E1FB2B59F00735894 /* NSStringTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringTool.m; sourceTree = "<group>"; };
 		07CD042B1FB4054A009081EE /* BLETool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLETool.h; sourceTree = "<group>"; };
@@ -254,8 +259,6 @@
 		1AF3C0E31F8FBB7B00A35AFC /* 51tgtwifiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 51tgtwifiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF3C0E71F8FBB7B00A35AFC /* _1tgtwifiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _1tgtwifiUITests.m; sourceTree = "<group>"; };
 		1AF3C0E91F8FBB7B00A35AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1AF3C0F81F8FBBCF00A35AFC /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
-		1AF3C0F91F8FBBCF00A35AFC /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
 		1AF3C0FA1F8FBBCF00A35AFC /* Get_IP_Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Get_IP_Address.h; sourceTree = "<group>"; };
 		1AF3C0FB1F8FBBCF00A35AFC /* Get_IP_Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Get_IP_Address.m; sourceTree = "<group>"; };
 		1AF3C0FC1F8FBBCF00A35AFC /* TGTInfoSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGTInfoSDK.h; sourceTree = "<group>"; };
@@ -306,6 +309,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07635CEB1FB9323400057FC8 /* 测试 */ = {
+			isa = PBXGroup;
+			children = (
+				07CD042E1FB54F40009081EE /* BluetrueVC.h */,
+				07CD042F1FB54F40009081EE /* BluetrueVC.m */,
+				07635CEC1FB9325200057FC8 /* GCDTestVC.h */,
+				07635CED1FB9325200057FC8 /* GCDTestVC.m */,
+			);
+			name = "测试";
+			sourceTree = "<group>";
+		};
 		120B877D1F95AF090053B5A5 /* Selfing */ = {
 			isa = PBXGroup;
 			children = (
@@ -580,12 +594,12 @@
 		1AF3C0F71F8FBBB800A35AFC /* Socket */ = {
 			isa = PBXGroup;
 			children = (
-				1AF3C0F81F8FBBCF00A35AFC /* AsyncSocket.h */,
-				1AF3C0F91F8FBBCF00A35AFC /* AsyncSocket.m */,
 				1AF3C0FA1F8FBBCF00A35AFC /* Get_IP_Address.h */,
 				1AF3C0FB1F8FBBCF00A35AFC /* Get_IP_Address.m */,
 				1AF3C0FC1F8FBBCF00A35AFC /* TGTInfoSDK.h */,
 				1AF3C0FD1F8FBBCF00A35AFC /* TGTInfoSDK.m */,
+				07635CE81FB9320B00057FC8 /* GCDSocketSDK.h */,
+				07635CE91FB9320B00057FC8 /* GCDSocketSDK.m */,
 			);
 			name = Socket;
 			sourceTree = "<group>";
@@ -593,12 +607,11 @@
 		1AF3C1071F8FC26200A35AFC /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				07635CEB1FB9323400057FC8 /* 测试 */,
 				1AF3C1081F8FC28200A35AFC /* HomeViewController.h */,
 				1AF3C1091F8FC28200A35AFC /* HomeViewController.m */,
 				12D6B87A1FA1984C006B6B38 /* BluetrueViewController.h */,
 				12D6B87B1FA1984C006B6B38 /* BluetrueViewController.m */,
-				07CD042E1FB54F40009081EE /* BluetrueVC.h */,
-				07CD042F1FB54F40009081EE /* BluetrueVC.m */,
 			);
 			name = "首页";
 			sourceTree = "<group>";
@@ -914,6 +927,8 @@
 			files = (
 				129AE2461F9ED99F0019192D /* MMMaterialDesignSpinner.m in Sources */,
 				1AF3C0CA1F8FBB7B00A35AFC /* ViewController.m in Sources */,
+				07635CEE1FB9325200057FC8 /* GCDTestVC.m in Sources */,
+				07635CEA1FB9320B00057FC8 /* GCDSocketSDK.m in Sources */,
 				129AE1F11F9DA5310019192D /* QLCustomButton.m in Sources */,
 				12D6B87C1FA1984C006B6B38 /* BluetrueViewController.m in Sources */,
 				07BC2A5F1FB2B59F00735894 /* NSStringTool.m in Sources */,
@@ -943,7 +958,6 @@
 				1AF3C1001F8FBBCF00A35AFC /* TGTInfoSDK.m in Sources */,
 				129AE23E1F9ED32A0019192D /* WeChatOrderModel.m in Sources */,
 				1AF3C1061F8FBBDE00A35AFC /* MainTabbarController.m in Sources */,
-				1AF3C0FE1F8FBBCF00A35AFC /* AsyncSocket.m in Sources */,
 				120B87841F95B1450053B5A5 /* ShoppingVc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

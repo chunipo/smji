@@ -7,6 +7,7 @@ pod 'WechatOpenSDK'
 pod 'MBProgressHUD'
 pod 'MJExtension'
 pod 'SDWebImage'
-pod 'BabyBluetooth','~> 0.7.0'
+pod 'BabyBluetooth',    '~> 0.7.0'
+pod 'CocoaAsyncSocket', '~> 7.4.1'
 
 end

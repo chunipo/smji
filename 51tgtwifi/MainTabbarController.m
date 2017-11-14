@@ -12,7 +12,10 @@
 #import "SetViewController.h"
 #import "ShoppingVc.h"
 #import "BluetrueViewController.h"
+
+
 #import "BluetrueVC.h"
+#import "GCDTestVC.h"
 
 @interface MainTabbarController ()
 {
@@ -20,7 +23,9 @@
     NSMutableArray   *_arr2;
     UIViewController *zx;
     MainNavVc        *_mainNavc;
-
+    
+    
+    
 
 }
 
@@ -32,10 +37,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //通知
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(SetLanguage) name:@"SetLanguage" object:nil];
     
     
-
+    
     
 }
 
@@ -56,11 +62,10 @@
     NSString *str2 = SetLange(@"shangcheng");
     NSString *str3 = SetLange(@"shezhi");
     NSArray *arr1 = @[str1,str2,str3];
-    NSArray *arr2 = @[@"BluetrueVC",@"ShoppingVc",@"SetViewController"];
+    NSArray *arr2 = @[@"HomeViewController",@"ShoppingVc",@"SetViewController"];
     
     //添加视图控制器到tabbar
     [self addVc:arr2 title:arr1];
-    
     
     
    // 设置tabbar颜色跟隐藏黑线

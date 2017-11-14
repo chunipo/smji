@@ -16,6 +16,13 @@ PODS:
     - AFNetworking/NSURLSession
   - BabyBluetooth (0.7.0)
   - CardIO (5.4.1)
+  - CocoaAsyncSocket (7.4.3):
+    - CocoaAsyncSocket/All (= 7.4.3)
+  - CocoaAsyncSocket/All (7.4.3):
+    - CocoaAsyncSocket/GCD
+    - CocoaAsyncSocket/RunLoop
+  - CocoaAsyncSocket/GCD (7.4.3)
+  - CocoaAsyncSocket/RunLoop (7.4.3)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
@@ -33,6 +40,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - BabyBluetooth (~> 0.7.0)
+  - CocoaAsyncSocket (~> 7.4.1)
   - Masonry
   - MBProgressHUD
   - MJExtension
@@ -44,6 +52,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BabyBluetooth: d50758aecf24d4a0ab9271d69f0f116d6bee51c9
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
@@ -51,6 +60,6 @@ SPEC CHECKSUMS:
   SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
   WechatOpenSDK: 0ee07a8d492299d3e47372a33da5af26524a7576
 
-PODFILE CHECKSUM: 85b8236afbbf73e3360edd1338f24bbe546ff22f
+PODFILE CHECKSUM: 802b6de1d54fdfc4fdddd39731d3db45f8012198
 
 COCOAPODS: 1.3.1
