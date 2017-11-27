@@ -11,7 +11,7 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
- #ifdef __OBJC__  只引用于OC文件上
+ #ifdef __OBJC__ // 只引用于OC文件上
 
 //5，5s          320x568
 //6，6s,7,7s     375x667
@@ -21,7 +21,9 @@
 #define  XScreenWidth    [UIScreen mainScreen].bounds.size.width
 #define  XScreenHeight   [UIScreen mainScreen].bounds.size.height
 
+#define IPHONE_X ([UIScreen mainScreen].bounds.size.height == 812.0)
 
+//#define is_X_or_0  ([UIScreen mainScreen].bounds.size.height == 812.0 ? 44:0)
 
 #import "UIImage+Extension.h"
 #import "UIView+Extension.h"
@@ -44,16 +46,16 @@
 //商用的client id
 
 //正式
-#define PPEnvironmentProduction @"Aeb29234lVUC7J-d8kxb24xzkLs7xdfZ2BZawAOZhzq0FytZ1br0yKE2jmaTne3fHwUxSCTw50DGQpW3"
+//#define PPEnvironmentProduction @"AZYVUsFf9TvbmcvKa12Zd-Ln0OiTOCsJZkz08_rsgxxRC50sAi5kD0soq9tclQnVYaeQ740ipRQac87u"
 
-//#define PPEnvironmentProduction @"AVoZGEMFTX_ID1n50O03rtvI-RYdoViPqC79MhuVG0O6YpmI1-7boobQwmXmuBWlSATNQQlE_OSCy8uU"
+#define PPEnvironmentProduction @"ARR5ivijrkPd3oRRSRJEiCmYlq83H73jHejGw8r-hyaiL0WbueHIUbOLtSEV_Vfh8rkU4aawFknGQZhA"//个人上架账号
 
 
 
 //沙盒
-#define PPEnvironmentSandbox @"AfhLLjSTUMDkV3n48QjpVvoX3WgqdblUQdyz21je155qoIXQXB_lxYfmS2w0PtxVJGHLwnXSbzgyi5Rb"
+//#define PPEnvironmentSandbox @"AayszX1rZ3ypENCb56zRbfqaazEiS5wMsTZRdbuMgPISAxNlXsOX5OQ1LJmJQKH94H9Bolfjwi_0MuL1"
 
-//#define PPEnvironmentSandbox @"AYD5FhYrZeCQ3DSkpujI-UpFnR6_uF-tcZWSr2ee65kayodOeikhddRLbu3dPUK7cg5wW6wiPADA_SWk"
+#define PPEnvironmentSandbox @"AYQGwNspSN-CjlZPMz2PN3C8akROwHZjDnzmRDGdxt965BkkvVfF8cUlzRU8a2AALVYCPMSc9uwqyJY5"  //个人上架账号
 
 #import "PayPalMobile.h"
 

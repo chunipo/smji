@@ -13,29 +13,29 @@
 
 
 
-//检测wifi需要的文件
+    //检测wifi需要的文件
 #import <ifaddrs.h>
 #import <net/if.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
 
-//间隔根据屏幕大小判断
+    //间隔根据屏幕大小判断
 #define Hmargin  [UIScreen mainScreen].bounds.size.width==375?3:14
 
 
 @interface HomeViewController ()<UIScrollViewDelegate>
 
 {
-//wifi弹窗
+    //wifi弹窗
     UIView *wifiView;
     
-//首页轮播图
+    //首页轮播图
     UIScrollView  *_topSrc;
     
-//设备信息背景板
+    //设备信息背景板
     
     UIView      *_deviceBack;
     
-//设备数据信息
+    //设备数据信息
     UILabel     *_ssid;
     UILabel     *_signalLabel;
     UILabel     *_powerLabel;
@@ -46,7 +46,7 @@
     
     
     
-//数据的名称
+    //数据的名称
 
     UILabel     *_signalLabel2;
     UILabel     *_powerLabel2;
@@ -58,7 +58,7 @@
     
     NSInteger   _textFont;
     
-//    尝试连接次数
+    //尝试连接次数
     NSInteger   _connetNum;
 
     
@@ -78,7 +78,7 @@
     
     
     
-//    背景图片
+    //背景图片
     UIImageView *backgroud = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, XScreenWidth,XScreenHeight)];
     
     backgroud.image = [UIImage imageNamed:@"2.jpg"];
@@ -89,12 +89,12 @@
     
     [self createsrcoView];
     
+    
 
-
-//    初始化设备数据的视图
+    //初始化设备数据的视图
     [self createDeviceLabel];
     
-//   子线程加载数据
+    //子线程加载数据
     [self loadInfo];
     
     
@@ -115,10 +115,10 @@
     
     [self createFlow];
     
-//    wifi检测提示
+    //wifi检测提示
     [self isWifi];
     
-//    从后台返回的通知
+    //从后台返回的通知
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shuaxin) name:@"shuaxin" object:nil];
 }
 

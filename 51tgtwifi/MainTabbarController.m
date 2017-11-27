@@ -16,6 +16,7 @@
 
 #import "BluetrueVC.h"
 #import "GCDTestVC.h"
+#import "PayViewController.h"
 
 @interface MainTabbarController ()
 {
@@ -56,13 +57,13 @@
 
 -(void)createUI{
     
-    //    NSArray *arr1 = @[@"首页",@"商城",@"设置"];
+    //NSArray *arr1 = @[@"首页",@"商城",@"设置"];
     
     NSString *str1 = SetLange(@"shouye");
     NSString *str2 = SetLange(@"shangcheng");
     NSString *str3 = SetLange(@"shezhi");
     NSArray *arr1 = @[str1,str2,str3];
-    NSArray *arr2 = @[@"HomeViewController",@"ShoppingVc",@"SetViewController"];
+    NSArray *arr2 = @[@"PayViewController",@"ShoppingVc",@"SetViewController"];
     
     //添加视图控制器到tabbar
     [self addVc:arr2 title:arr1];

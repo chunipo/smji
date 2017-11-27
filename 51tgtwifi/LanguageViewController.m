@@ -63,7 +63,12 @@
 
 #pragma mark - 创建标题栏
 -(void)HeadTitle{
+    if (IPHONE_X) {
+    _TitleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, XScreenWidth, 60+20)];
+    }
+    else{
     _TitleView = [[UIView alloc]initWithFrame:CGRectMake(0, 20, XScreenWidth, 60)];
+    }
     
     _TitleView.backgroundColor = [UIColor colorWithRed:64.0/255.0 green:84.0/255.0 blue:178.0/255.0 alpha:1];
     

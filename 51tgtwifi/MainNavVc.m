@@ -20,7 +20,7 @@
     
     self.navigationBar.hidden = YES;
     
-//    状态栏变为白色
+    //状态栏变为白色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
 
 }

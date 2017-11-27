@@ -241,7 +241,7 @@
     payment.shortDescription = @"100M 流量";
     payment.intent = PayPalPaymentIntentSale;
     //传入订单ID  后台生成
-    self.paypalOrderId = @"1";
+    self.paypalOrderId = @"2";
     PayPalItem *palltem = [PayPalItem itemWithName:self.paypalOrderId withQuantity:1 withPrice:payment.amount withCurrency:@"USD" withSku:self.paypalOrderId];
     NSArray *array = [NSArray arrayWithObjects:palltem, nil];
     payment.items = array;

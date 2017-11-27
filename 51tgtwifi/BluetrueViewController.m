@@ -26,11 +26,11 @@
     NSString          *_peripName;
     
     
-    BOOL              isEqul  ;
+    BOOL              isEqul;
 }
 
 
-/* 中心管理者 */
+ /* 中心管理者 */
  @property (nonatomic, strong) CBCentralManager *cMgr;
  
  /* 连接到的外设 */
@@ -147,7 +147,8 @@
     mac = [mac stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     NSLog(@"peripheral.name####%@。信号强度###%@",peripheral.identifier.UUIDString,mac);
-   
+    
+    
     
     if ([mac hasPrefix:@"c1fff0c850003173"]) {
         // 在此处对我们的 advertisementData(外设携带的广播数据) 进行一些处理
